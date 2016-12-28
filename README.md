@@ -24,7 +24,7 @@ Tests have a coverage of 95,40%. By running [Code Coverage Tool from Visual Stud
 
 The basic modeling structure was "originated" by writing the first Tests with TDD. By describing the basic rules needed to be covered by the code, the first classes and properties appeared. But, it's well known that and excesive use of TDD causes you to lose sight of the overall design of the modeling model.
 
-Automation was set up by using Travis CI. All I did was to add the [.travis.yml](./.travis.yml) file. 
+Continuous integration was set up by using Travis CI, including automated tests. All I did was to add the [.travis.yml](./.travis.yml) file. 
 I had one issue by using Visual Studio UnitTesting library because Travis run on Linux and doesn't support it. So I installed NUnit to my Test project due to compatibility issues and it work!
 
 ![Travis Summary Build Result](https://github.com/npattarone/FDV.BikesRent/blob/master/Images/Travis%20Result%202.png)
