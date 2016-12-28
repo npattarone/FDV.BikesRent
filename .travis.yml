@@ -1,7 +1,7 @@
 language: csharp
-solution: "./FDV.BikesRent/FDV.BikesRent.sln"
+solution: "./FDV.BikesRent.sln"
 install:
-- travis_retry nuget restore -source "https://www.nuget.org/api/v2" ./FDV.BikesRent/FDV.BikesRent.sln
+- travis_retry nuget restore -source "https://www.nuget.org/api/v2" ./FDV.BikesRent.sln
 script:
-- xbuild ./FDV.BikesRent/FDV.BikesRent.sln
-- mono ./FDV.BikesRent/packages/xunit.runner.console*/tools/xunit.console.exe FDV.BikesRent.Test/bin/Debug/FDV.BikesRent.Tests.dll
+- xbuild ./FDV.BikesRent.sln
+- mono ./FDV.BikesRent/packages/xunit.runner.console*/tools/xunit.console.exe ./FDV.BikesRent.Test/bin/Debug/FDV.BikesRent.Tests.dll
