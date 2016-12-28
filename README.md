@@ -1,4 +1,4 @@
-## Summary
+## Summary [![Build Status](https://travis-ci.org/npattarone/FDV.BikesRent.svg?branch=master)](https://travis-ci.org/npattarone/FDV.BikesRent)
 
 This small class library contains the base model for a basic Bikes Rent. The business rules are:
 
@@ -18,8 +18,12 @@ I use a Rent class to define basic properties for a Rent, such as Time, Price an
 
 ## Tests
 
-Tests were written to cover happy and alternative paths. The have a coverage of %. By running [Code Coverage Tool from Visual Studio](https://msdn.microsoft.com/en-us/library/dd537628.aspx) you can check it on your own.
+Tests have a coverage of 95,40%. By running [Code Coverage Tool from Visual Studio](https://msdn.microsoft.com/en-us/library/dd537628.aspx) you can check it on your own.
 
 The basic modeling structure was "originated" by writing the first Tests with TDD. By describing the basic rules needed to be covered by the code, the first classes and properties appeared. But, it's well known that and excesive use of TDD causes you to lose sight of the overall design of the modeling model.
 
-To run them, this [site](https://www.visualstudio.com/en-us/docs/test/developer-testing/getting-started/getting-started-with-developer-testing#run-unit-tests-with-test-explorer) provides a good step-by-step procedure.
+Automation was set up by using Travis CI. All I did was to add the [.travis.yml](./.travis.yml) file. 
+I had one issue by using Visual Studio UnitTesting library because Travis run on Linux and doesn't support it. So I installed NUnit to my Test project due to compatibility issues and it work!
+
+
+```
