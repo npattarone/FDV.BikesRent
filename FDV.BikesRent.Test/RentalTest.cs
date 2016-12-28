@@ -1,13 +1,13 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
+using System;
 using System.Linq;
 
 namespace FDV.BikesRent.Test
 {
-    [TestClass]
+    [TestFixture]
     public class RentalTest
     {
-        [TestMethod]
+        [Test]
         public void RentByHourForThreeHours()
         {
             var rental = new RentalContext();
@@ -20,7 +20,7 @@ namespace FDV.BikesRent.Test
             Assert.IsTrue(rental.Rentals.First().RentType == RentTypeEnum.ByHour);
         }
 
-        [TestMethod]
+        [Test]
         public void RentByWeekForTwoWeeks()
         {
             var rental = new RentalContext();
@@ -33,7 +33,7 @@ namespace FDV.BikesRent.Test
             Assert.IsTrue(rental.Rentals.First().RentType == RentTypeEnum.ByWeek);
         }
 
-        [TestMethod]
+        [Test]
         public void RentByDayForFourDays()
         {
             var rental = new RentalContext();
@@ -46,7 +46,7 @@ namespace FDV.BikesRent.Test
             Assert.IsTrue(rental.Rentals.First().RentType == RentTypeEnum.ByDay);
         }
 
-        [TestMethod]
+        [Test]
         public void FamilyRental()
         {
             var rental = new RentalContext();
